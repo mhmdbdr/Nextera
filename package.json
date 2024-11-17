@@ -10,8 +10,26 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@nuxtjs/device": "^3.2.4",
+    "@pinia/nuxt": "^0.5.5",
+    "bootstrap": "^5.3.3",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "normalize.css": "^8.0.1",
     "nuxt": "^3.13.0",
+    "nuxt-viewport": "^2.2.0",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "overrides": {
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.80.3"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "functions": {
+    "source": ".output/server",
+    "runtime": "nodejs18"
+  },
+  "hosting": {
+    "public": ".output/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "server"
+      }
+    ]
+  }
+}
