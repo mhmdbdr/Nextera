@@ -24,13 +24,6 @@ logs
 !.env.example
 
 # Editor directories and files
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json

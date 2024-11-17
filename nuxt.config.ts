@@ -33,7 +33,4 @@ export default defineNuxtConfig({
   build: {
     transpile: ['@fortawesome/vue-fontawesome']
   },
-  nitro: {
-    preset: 'firebase',
-  },
 })
