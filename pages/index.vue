@@ -13,13 +13,13 @@
         </div>
         <div class="textSec">
           <div class="title">
-            <div class="part1">THE ONLY</div>
+            <div class="part1">ensure your Bitcoin</div>
             <div class="part2">
-              <span>WAY</span>
+              <span>reachs</span>
               <span></span>
-              <span>TO BANK</span>
+              <span>the people</span>
             </div>
-            <div class="part3">YOUR BITCOIN</div>
+            <div class="part3">who matter most</div>
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-6 col-11 offset-lg-2 offset-1">
@@ -50,7 +50,7 @@
 </template>
 
 <script setup>
-const { $ScrollTrigger, $gsap } = useNuxtApp()
+const { $ScrollTrigger, $gsap, $viewport } = useNuxtApp()
 
 let ctx
 const gsapFunc = () => {
@@ -86,26 +86,13 @@ const gsapFunc = () => {
             ".textSec .title",
             {
               width: isLargeDesktop
-                ? "40vw"
+                ? "50vw"
                 : isDesktop
                 ? "50vw"
                 : isTablet
                 ? "60vw"
                 : "85vw",
-              top: isLargeDesktop
-                ? "140px"
-                : isDesktop
-                ? "120px"
-                : isTablet
-                ? "100px"
-                : "80px",
-              fontSize: isLargeDesktop
-                ? "5rem"
-                : isDesktop
-                ? "4.5rem"
-                : isTablet
-                ? "3.5rem"
-                : "2rem",
+              top: "20%",
               ease: "none",
             },
             0
@@ -177,39 +164,63 @@ onUnmounted(() => {
           white-space: nowrap;
           width: 90vw;
           font-size: 2rem;
-          top: 50%;
+          top: 30%;
+          text-transform: capitalize;
 
           @media (min-width: 768px) and (max-width: 1023px) {
             width: 75vw;
-            font-size: 3.5rem;
+            font-size: 3rem;
           }
 
           @media (min-width: 1024px) and (max-width: 1439px) {
             width: 60vw;
-            font-size: 4.5rem;
+            font-size: 3rem;
           }
 
           @media (min-width: 1440px) {
             width: 60vw;
             font-size: 5rem;
           }
+          .part1,
+          .part2,
+          .part3 {
+            @media (max-width: 426px) {
+              text-align: center;
+            }
+          }
           .part2 {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 5px;
             span:nth-child(2) {
-              display: inline-block;
-              flex-basis: 100%;
-              margin: 0 10px;
-              height: 2px;
-              background-color: white;
+              display: none;
+            }
+            span:nth-child(3) {
+              color: var(--prim-color);
+            }
+            @media (min-width: 426px) {
+              align-items: center;
+              justify-content: space-between;
+              gap: 0;
+              span:nth-child(2) {
+                display: inline-block;
+                flex-basis: 100%;
+                margin: 0 10px;
+                height: 2px;
+                background-color: white;
+              }
+              span:nth-child(3) {
+                color: white;
+              }
             }
             span:nth-child(3) {
               font-family: "Noto Serif", serif;
             }
           }
           .part3 {
-            text-align: end;
+            @media (min-width: 426px) {
+              text-align: end;
+            }
           }
         }
         .row {
