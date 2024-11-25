@@ -1,11 +1,15 @@
 :root {
   scroll-behavior: auto !important;
-  --prim-color: #ff550c;
-  --blackT-color: #090402;
-  --para1-color: #c2c2c2;
-  --para2-color: #7c7c7c;
-  --dActive-color: #c34813;
-  --disable-color: #242424;
+
+
+
+  --prim-color: #cb1977;
+  --sec-color: #0000FF;
+  --accent-color: #008484;
+  --blackT-color: #071108;
+  --para1-color: #ffffff;
+  --para2-color: #63d471;
+  --dActive-color: #63a46c;
   --hover-color: #3a3635;
 }
 
@@ -13,6 +17,10 @@ body {
   font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
+}
+
+a {
+  color: white;
 }
 
 // mainBtn style-start
@@ -46,9 +54,20 @@ body {
 }
 
 // mainBtn style-end
-// main box style-start
+// global-style-start
+@media (width < 1024px) {
+  .sec {
+    margin-top: 80px !important;
+  }
+}
 
-// main box style-end
+.sec {
+  margin-top: 130px;
+}
+
+
+
+// global-style-end
 
 // mainBtn-hover-style-start
 .linkto {

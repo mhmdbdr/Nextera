@@ -18,15 +18,6 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-// svg {
-//   position: fixed;
-//   top: -30%;
-//   left: 0;
-//   max-width: 100%;
-//   width: 100%;
-//   height: 100%;
-//   max-height: 100%;
-//   opacity: 0.3;
-// }
-</style>
+<script setup></script>
+
+<style lang="scss" scoped></style>
