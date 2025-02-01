@@ -4,12 +4,12 @@
       <div class="heroModule">
         <div class="videoSec">
           <video
-            src="assets/videos/homePage.webm"
+            src="public/videos/homePage.webm"
             loop
             muted
             autoplay
             playsinline
-            poster="assets/imgs/heroVid_poster.png"
+            poster="public/imgs/heroVid_poster.png"
           ></video>
         </div>
         <div class="textSec">
@@ -72,7 +72,7 @@
           </div>
           <div class="col-lg-6">
             <div class="img-container">
-              <img src="/assets//imgs/aboutSec.jpg" alt="aboutImg" />
+              <img src="/public//imgs/aboutSec.jpg" alt="aboutImg" />
               <div class="numInfo">
                 <div class="num">70,000+</div>
                 <span>attendees </span>
@@ -129,7 +129,7 @@
                     <image
                       filter="url(#distortionFilter)"
                       class="distort__img"
-                      xlink:href="assets/imgs/homePage/speakers/speaker_4.png"
+                      xlink:href="public/imgs/homePage/speakers/speaker_4.png"
                       width="100%"
                       height="100%"
                       preserveAspectRatio="xMidYMid slice"
@@ -145,7 +145,7 @@
             <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_1.png"
+                  src="public/imgs/homePage/speakers/speaker_1.png"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -157,7 +157,7 @@
             <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_2.png"
+                  src="public/imgs/homePage/speakers/speaker_2.png"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -169,7 +169,7 @@
             <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_3.jpg"
+                  src="public/imgs/homePage/speakers/speaker_3.jpg"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -181,7 +181,7 @@
             <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_5.jpg"
+                  src="public/imgs/homePage/speakers/speaker_5.jpg"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -193,7 +193,7 @@
             <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_6.png"
+                  src="public/imgs/homePage/speakers/speaker_6.png"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -205,7 +205,7 @@
             <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_7.jpg"
+                  src="public/imgs/homePage/speakers/speaker_7.jpg"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -217,7 +217,7 @@
             <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_9.jpg"
+                  src="public/imgs/homePage/speakers/speaker_9.jpg"
                   alt="speakerCard"
                 />
                 <div class="info">
