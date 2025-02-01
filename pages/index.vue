@@ -4,7 +4,7 @@
       <div class="heroModule">
         <div class="videoSec">
           <video
-            src="assets/videos/HPageMainVid.mp4"
+            src="assets/videos/homePage.webm"
             loop
             muted
             autoplay
@@ -18,18 +18,18 @@
             <div class="part2">
               <span>Driving</span>
               <span></span>
-              <span>Tomorrow’s</span>
+              <span>Tomorrow's</span>
             </div>
             <div class="part3">Boldest Ideas</div>
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-6 offset-lg-2 offset-md-1">
               <div class="infoSec">
-                <p>
-                  Politico has said we run “the world’s premier tech
-                  conference”, the Atlantic that Web Summit is “where the future
-                  goes to be born”, and the New York Times that we assemble “a
-                  grand conclave of the tech industry’s high priests”.
+                <p class="splitText">
+                  Politico has said we run "the world's premier tech
+                  conference", the Atlantic that Web Summit is "where the future
+                  goes to be born", and the New York Times that we assemble "a
+                  grand conclave of the tech industry's high priests".
                 </p>
                 <span
                   >Web Summit brings together 70,000+ people, and the companies
@@ -52,15 +52,15 @@
         <div class="row">
           <div class="col-lg-5 mb-lg-0 mb-5 offset-lg-1">
             <div class="text">
-              <div class="title">what is Nextera?</div>
+              <div id="split" class="title">what is Nextera?</div>
               <div class="info">
-                <p>
-                  Politico has said we run “the world’s premier tech
-                  conference”, the Atlantic that Web Summit is “where the future
-                  goes to be born”, and the New York Times that we assemble “a
-                  grand conclave of the tech industry’s high priests”.
+                <p class="splitp">
+                  Politico has said we run "the world's premier tech
+                  conference", the Atlantic that Web Summit is "where the future
+                  goes to be born", and the New York Times that we assemble "a
+                  grand conclave of the tech industry's high priests".
                 </p>
-                <p>
+                <p class="splitp">
                   At a time of great uncertainty for many industries and,
                   indeed, the world itself, we gather policymakers, heads of
                   state, and the founders and CEOs of technology companies and
@@ -94,25 +94,55 @@
       <div class="container">
         <div class="speakers">
           <UiAnimHeader>
-            <template #ff> our 2024 speakers </template>
-            <template #ss> our 2024 speakers </template>
-            <template #tt> our 2024 speakers </template>
-            <template #fo> our 2024 speakers </template>
+            <template #ff> partners with us </template>
+            <template #ss> partners with us </template>
+            <template #tt> partners with us </template>
+            <template #fo> partners with us </template>
           </UiAnimHeader>
-          <div class="content row">
-            <div class="speakerCard col-lg-4 col-md-6">
+          <div class="content">
+            <div class="speakerCard">
               <NuxtLink to="/">
-                <img
-                  src="assets/imgs/homePage/speakers/speaker_4.png"
-                  alt="speakerCard"
-                />
-                <div class="info">
-                  <div class="name">Pharrell Williams</div>
-                  <div class="pos">Artist and Entrepreneur</div>
-                </div>
+                <figure>
+                  <svg
+                    class="distort"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs>
+                      <filter id="distortionFilter">
+                        <feTurbulence
+                          type="turbulence"
+                          baseFrequency="0.1"
+                          numOctaves="5"
+                          seed="2"
+                          result="noise"
+                        />
+                        <feDisplacementMap
+                          in="SourceGraphic"
+                          in2="noise"
+                          scale="30"
+                          xChannelSelector="R"
+                          yChannelSelector="G"
+                        />
+                      </filter>
+                    </defs>
+                    <image
+                      filter="url(#distortionFilter)"
+                      class="distort__img"
+                      xlink:href="assets/imgs/homePage/speakers/speaker_4.png"
+                      width="100%"
+                      height="100%"
+                      preserveAspectRatio="xMidYMid slice"
+                    />
+                  </svg>
+                  <figcaption class="info">
+                    <div class="name">Pharrell Williams</div>
+                    <div class="pos">Artist and Entrepreneur</div>
+                  </figcaption>
+                </figure>
               </NuxtLink>
             </div>
-            <div class="speakerCard col-lg-4 col-md-6">
+            <div class="speakerCard">
               <NuxtLink to="/">
                 <img
                   src="assets/imgs/homePage/speakers/speaker_1.png"
@@ -124,7 +154,7 @@
                 </div>
               </NuxtLink>
             </div>
-            <div class="speakerCard col-lg-4 col-md-6">
+            <div class="speakerCard">
               <NuxtLink to="/">
                 <img
                   src="assets/imgs/homePage/speakers/speaker_2.png"
@@ -136,7 +166,7 @@
                 </div>
               </NuxtLink>
             </div>
-            <div class="speakerCard col-lg-4 col-md-6">
+            <div class="speakerCard">
               <NuxtLink to="/">
                 <img
                   src="assets/imgs/homePage/speakers/speaker_3.jpg"
@@ -148,10 +178,10 @@
                 </div>
               </NuxtLink>
             </div>
-            <div class="speakerCard col-lg-4 col-md-6">
+            <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_4.png"
+                  src="assets/imgs/homePage/speakers/speaker_5.jpg"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -160,10 +190,10 @@
                 </div>
               </NuxtLink>
             </div>
-            <div class="speakerCard col-lg-4 col-md-6">
+            <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_1.png"
+                  src="assets/imgs/homePage/speakers/speaker_6.png"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -172,10 +202,10 @@
                 </div>
               </NuxtLink>
             </div>
-            <div class="speakerCard col-lg-4 col-md-6">
+            <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_2.png"
+                  src="assets/imgs/homePage/speakers/speaker_7.jpg"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -184,10 +214,10 @@
                 </div>
               </NuxtLink>
             </div>
-            <div class="speakerCard col-lg-4 col-md-6">
+            <div class="speakerCard">
               <NuxtLink to="/">
                 <img
-                  src="assets/imgs/homePage/speakers/speaker_3.jpg"
+                  src="assets/imgs/homePage/speakers/speaker_9.jpg"
                   alt="speakerCard"
                 />
                 <div class="info">
@@ -204,14 +234,15 @@
 </template>
 
 <script setup>
-const { $gsap } = useNuxtApp()
+const { $gsap: gsap, $SplitType: SplitType } = useNuxtApp()
 
-let ctxHero
-let ctxAbout
-let ctxSpeakers
+const ctx = ref()
+
 const gsapFunc = () => {
-  ctxHero = $gsap.context(() => {
-    const tl = $gsap.timeline({
+  ctx.value = gsap.context(() => {
+    // hero-aniamtion-start
+
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".heroModule",
         start: "top top",
@@ -220,7 +251,7 @@ const gsapFunc = () => {
       },
     })
 
-    const mm = $gsap.matchMedia()
+    const mm = gsap.matchMedia()
 
     mm.add(
       {
@@ -234,7 +265,7 @@ const gsapFunc = () => {
           context.conditions
 
         tl.to(".videoSec video", {
-          y: 0,
+          translateY: 0,
           scale: 1,
           borderRadius: "0",
         })
@@ -248,7 +279,7 @@ const gsapFunc = () => {
                 : isTablet
                 ? "65vw"
                 : "85vw",
-              top: "20%",
+              translateZ: (-50, 0, 0),
               ease: "none",
             },
             0
@@ -256,49 +287,68 @@ const gsapFunc = () => {
           .to(
             ".textSec .row",
             {
-              bottom: "0px",
+              translateY: 0,
               ease: "none",
             },
             0
           )
       }
     )
-  })
-  ctxAbout = $gsap.context(() => {
-    const aboutTl = $gsap.timeline({
+
+    // hero-aniamtion-end
+
+    // about-animation-start
+
+    new SplitType("#split", { types: "words" })
+    new SplitType(".splitp", { types: "line, words" })
+
+    gsap.from(".numInfo", {
       scrollTrigger: {
         trigger: ".img-container",
         start: "top center",
         end: "center center",
         toggleActions: "play none none reverse",
       },
-    })
-    aboutTl.from(".numInfo", {
-      y: 50,
+      translateY: 50,
       opacity: 0,
       duration: 0.7,
       stagger: 0.1,
     })
-  })
-  ctxSpeakers = $gsap.context(() => {
-    const container = document.querySelector(".speakers .content")
-    const cards = container.querySelectorAll(".speakerCard")
-    const speakersTl = $gsap.timeline({
-      defaults: {
-        ease: "power3",
-      },
+    gsap.from(".about .title .word", {
       scrollTrigger: {
-        trigger: container,
-        start: "top 75%",
-        end: "bottom bottom",
-        scrub: 1,
+        trigger: ".about .title",
+        start: "+100 bottom",
+        bottom: "bottom bottom",
       },
-    })
-    speakersTl.from(cards, {
+      y: 20,
       stagger: 0.1,
-      y: 200,
+      duration: 1,
       autoAlpha: 0,
+      ease: "back.out(1.7)",
     })
+    gsap.effects.textShow(".info p .line")
+
+    // about-animation-end
+
+    // speakers-animation-start
+
+    const cards = gsap.utils.toArray(".speakerCard").map((target) => {
+      gsap.from(target, {
+        y: 30,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: target,
+          start: "top 75%",
+          end: "bottom bottom",
+        },
+      })
+    })
+
+    gsap.effects.feTurbulence("figure", {
+      filterSelector: "#distortionFilter",
+    })
+
+    // speakers-animation-end
   })
 }
 
@@ -307,23 +357,13 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  if (ctxHero) {
-    ctxHero.revert()
-  }
-  if (ctxAbout) {
-    ctxAbout.revert()
-  }
-  if (ctxSpeakers) {
-    ctxSpeakers.revert()
-  }
+  ctx.value.revert()
 })
 </script>
 
 <style lang="scss" scoped>
 .homePage {
-  height: 4000px;
-  background-color: black;
-  color: white;
+  height: 10000px;
   .heroSec {
     position: relative;
     width: 100%;
@@ -368,13 +408,13 @@ onUnmounted(() => {
         .title {
           position: absolute;
           left: 50%;
-          transform: translateX(-50%);
-          color: white;
+          transform: translate3d(-50%, 40%, 0);
+          color: var(--text-color);
           line-height: 1;
           white-space: nowrap;
           width: 90vw;
           font-size: 1.5rem;
-          top: 30%;
+          top: 20%;
           text-transform: capitalize;
 
           @media (min-width: 768px) and (max-width: 1023px) {
@@ -421,10 +461,10 @@ onUnmounted(() => {
                 flex-basis: 100%;
                 margin: 0 10px;
                 height: 2px;
-                background-color: white;
+                background-color: var(--text-color);
               }
               span:nth-child(3) {
-                color: white;
+                color: var(--text-color);
               }
             }
             span:nth-child(3) {
@@ -442,10 +482,11 @@ onUnmounted(() => {
           margin-left: 0;
           position: absolute;
           left: 0;
-          bottom: -500px;
+          bottom: 0;
+          transform: translateY(500px);
         }
         .infoSec {
-          color: white;
+          color: var(--text-color);
           margin: 20px 0 20px;
           @media (min-width: 1024px) {
             margin: 20px 0 70px;
@@ -467,7 +508,7 @@ onUnmounted(() => {
       display: flex;
       align-items: center;
       .text {
-        color: var(--para1-color);
+        color: var(--text-muted-color);
         @media (width <= 576px) {
           .title {
             font-size: 35px !important;
@@ -476,8 +517,9 @@ onUnmounted(() => {
         .title {
           font-size: 45px;
           font-weight: bold;
-          color: var(--para2-color);
+          color: var(--text-color);
           text-transform: capitalize;
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
         }
       }
       .img-container {
@@ -517,21 +559,21 @@ onUnmounted(() => {
             top: 7%;
             left: 3%;
             .num {
-              color: rgb(0, 172, 168);
+              color: var(--prim-color);
             }
           }
           &:nth-last-of-type(2) {
             top: 50%;
             right: 3%;
             .num {
-              color: rgb(240, 90, 44);
+              color: var(--muted-color);
             }
           }
           &:nth-last-of-type(3) {
             bottom: 5%;
             left: 15%;
             .num {
-              color: #60a6fb;
+              color: var(--link-color);
             }
           }
         }
@@ -539,18 +581,60 @@ onUnmounted(() => {
     }
   }
   .speakersSec {
+    padding-top: 30px;
+    background: linear-gradient(
+      180deg,
+      var(--bg-color) 55%,
+      var(--prim-color) 92%,
+      var(--muted-color) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    @media (width > 991px) {
+      .speakers {
+        .content {
+          grid-template-columns: repeat(5, 1fr) !important;
+        }
+      }
+    }
+    @media (991px > width > 767px) {
+      .speakers {
+        .content {
+          grid-template-columns: repeat(4, 1fr) !important;
+        }
+      }
+    }
+    @media (767px > width > 575px) {
+      .speakers {
+        .content {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
+      }
+    }
     .speakers {
       .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
         .speakerCard {
-          height: fit-content;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
           a {
             position: relative;
             display: block;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            border-radius: 20px;
+            border-radius: 10px;
+            figure {
+              width: 100%;
+              height: 100%;
+              margin: 0;
+            }
+            .distort {
+              width: 100%;
+              height: 100%;
+              display: block;
+            }
             &::before {
               content: "";
               position: absolute;
@@ -558,32 +642,67 @@ onUnmounted(() => {
               left: 0;
               width: 100%;
               height: 100%;
-              background-color: rgba(0, 0, 0, 0.388);
-              border-radius: 20px;
-              transition-duration: 0.3s;
+              background-color: var(--shadow-color);
+              opacity: 0;
+              transition: opacity 0.3s ease-in-out;
+              z-index: 2;
             }
             &:hover {
               &::before {
-                opacity: 0;
+                opacity: 1;
               }
               img {
                 transform: scale(1.1);
               }
+              .info {
+                bottom: 15px;
+                opacity: 1;
+              }
             }
-            img {
+            img,
+            image {
               max-width: 100%;
               width: 100%;
               transition-duration: 0.3s;
+              z-index: 1;
+              object-fit: cover;
             }
             .info {
               position: absolute;
-              bottom: 10px;
+              opacity: 0;
+              bottom: 0px;
               left: 10px;
+              transition-duration: 0.3s;
+              z-index: 3;
+              color: var(--text-color);
+              font-size: 1.1rem;
+              text-transform: capitalize;
             }
           }
         }
       }
     }
   }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }
 </style>

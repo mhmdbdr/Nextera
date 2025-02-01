@@ -8,7 +8,7 @@
               <div class="title">your event</div>
               <ul>
                 <li class="linkto nalract">
-                  <NuxtLink to="/">
+                  <NuxtLink to="/schedule">
                     <span>Schedule</span>
                     <font-awesome-icon icon="fa-regular fa-circle-right" />
                   </NuxtLink>
@@ -16,36 +16,6 @@
                 <li class="linkto nalract">
                   <NuxtLink to="/">
                     <span>Meet our attendees</span>
-                    <font-awesome-icon icon="fa-regular fa-circle-right" />
-                  </NuxtLink>
-                </li>
-                <li class="linkto nalract">
-                  <NuxtLink to="/">
-                    <span>Night Summit</span>
-                    <font-awesome-icon icon="fa-regular fa-circle-right" />
-                  </NuxtLink>
-                </li>
-                <li class="linkto nalract">
-                  <NuxtLink to="/">
-                    <span>Hotels</span>
-                    <font-awesome-icon icon="fa-regular fa-circle-right" />
-                  </NuxtLink>
-                </li>
-                <li class="linkto nalract">
-                  <NuxtLink to="/">
-                    <span>Jobs board</span>
-                    <font-awesome-icon icon="fa-regular fa-circle-right" />
-                  </NuxtLink>
-                </li>
-                <li class="linkto nalract">
-                  <NuxtLink to="/">
-                    <span>Perks</span>
-                    <font-awesome-icon icon="fa-regular fa-circle-right" />
-                  </NuxtLink>
-                </li>
-                <li class="linkto nalract">
-                  <NuxtLink to="/">
-                    <span>Blog</span>
                     <font-awesome-icon icon="fa-regular fa-circle-right" />
                   </NuxtLink>
                 </li>
@@ -162,7 +132,7 @@
 
 <script setup>
 const props = defineProps(["isOpened"])
-const { $gsap } = useNuxtApp()
+const { $gsap: gsap } = useNuxtApp()
 const emit = defineEmits(["animationStarts", "animationEnds"])
 
 const isAnimating = ref(false)
@@ -171,7 +141,7 @@ watch(
   () => props.isOpened,
   (newVal) => {
     if (isAnimating.value) return
-    const tl = $gsap.timeline({
+    const tl = gsap.timeline({
       onStart: () => {
         isAnimating.value = true
         emit("animationStarts")
@@ -190,7 +160,7 @@ watch(
         transform: "scaleY(0)",
         transformOrigin: "top",
       })
-        .set(".box", {
+        .set(".sideBar .box", {
           y: 30,
           opacity: 0,
         })
@@ -199,7 +169,7 @@ watch(
           duration: 0.8,
         })
         .to(
-          ".box",
+          ".sideBar .box",
           {
             y: 0,
             opacity: 1,
@@ -209,7 +179,7 @@ watch(
           "-=0.1"
         )
     } else {
-      tl.to(".box", {
+      tl.to(".sideBar .box", {
         y: 30,
         opacity: 0,
         duration: 0.2,
@@ -230,11 +200,11 @@ watch(
 )
 
 onMounted(() => {
-  $gsap.set(".sideBar", {
+  gsap.set(".sideBar", {
     visibility: "hidden",
     scaleY: 0,
   })
-  $gsap.set(".box", {
+  gsap.set(".sideBar .box", {
     y: 30,
     opacity: 0,
   })
@@ -326,7 +296,7 @@ onMounted(() => {
       .content {
         ul {
           li {
-            color: black;
+            color: var(--bg-color);
           }
         }
       }
@@ -338,7 +308,7 @@ onMounted(() => {
       flex-direction: column;
       justify-content: space-between;
       .title {
-        color: var(--para1-color);
+        color: var(--text-muted-color);
         text-transform: uppercase;
         font-size: 13px;
         margin-bottom: 15px;
@@ -356,7 +326,7 @@ onMounted(() => {
           padding: 0;
           text-transform: capitalize;
           font-size: 22px;
-          color: white;
+          color: var(--text-color);
         }
       }
     }

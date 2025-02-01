@@ -29,6 +29,10 @@ export default defineNuxtConfig({
         { name: "format-detection", content: "telephone=no" },
       ],
     },
+    pageTransition: {
+      name: "page",
+      mode: "out-in"
+    }
   },
   build: {
     transpile: ['@fortawesome/vue-fontawesome']

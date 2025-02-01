@@ -42,7 +42,7 @@ const props = defineProps(["notext"])
     left: 50%;
     border-radius: 50%;
     transform: translate3d(-50%, 0, 0) scale3d(0, 0, 0);
-    background-color: var(--hover-color);
+    background-color: var(--accent-hover-color);
     z-index: 0;
   }
   &::before {
@@ -54,7 +54,7 @@ const props = defineProps(["notext"])
     left: 0;
     transform: translate3d(0, -100%, 0);
     transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
-    background-color: var(--hover-color);
+    background-color: var(--accent-hover-color);
   }
   &:hover {
     .text {

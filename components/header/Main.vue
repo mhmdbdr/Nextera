@@ -10,11 +10,13 @@
             </template>
           </UiBtn>
         </div>
-        <transition name="logoTrans">
-          <div v-show="isLogoVisible || isOpened" class="logo">
-            <img src="assets/imgs/logoirl.png" alt="" />
-          </div>
-        </transition>
+        <NuxtLink to="/">
+          <transition name="logoTrans">
+            <div v-show="isLogoVisible || isOpened" class="logo">
+              <img src="assets/imgs/logoirl.png" alt="" />
+            </div>
+          </transition>
+        </NuxtLink>
         <div class="noTBtns">
           <div v-if="!$viewport.isLessThan('desktop')" class="partnerBtn">
             <UiBtn :notext="$viewport.isLessThan('desktop')" class="UiBtn">
@@ -30,11 +32,11 @@
             <UiBtn @click="clickell" :notext="true" class="UiBtn toSide">
               <template #icons>
                 <font-awesome-icon
-                  :class="{ active: !isOpened }"
+                  :class="{ active: !headerStore.isSidebarOpen }"
                   icon="fa-solid fa-grip-lines"
                 />
                 <font-awesome-icon
-                  :class="{ active: isOpened }"
+                  :class="{ active: headerStore.isSidebarOpen }"
                   icon="fa-solid fa-xmark"
                 />
               </template>
@@ -46,7 +48,7 @@
     <headerSideBar
       @animationStarts="animationStarts"
       @animationEnds="animationEnds"
-      :isOpened="isOpened"
+      :isOpened="headerStore.isSidebarOpen"
     />
   </div>
 </template>
@@ -56,6 +58,10 @@ const scrollY = ref(0)
 const isLogoVisible = ref(false)
 const isOpened = ref(false)
 const isAnimating = ref(false)
+
+const headerStore = useHeaderStore()
+const router = useRouter()
+
 const animationStarts = () => {
   isAnimating.value = true
 }
@@ -64,12 +70,16 @@ const animationEnds = () => {
 }
 const clickell = () => {
   if (isAnimating.value) return
-  isOpened.value = !isOpened.value
+  headerStore.toggleSidebar()
 }
 
 const handleScroll = () => {
   scrollY.value = window.scrollY
 }
+
+router.beforeEach((to, from) => {
+  headerStore.closeSidebar()
+})
 
 onMounted(() => {
   if (window.scrollY === 0) {

@@ -1,26 +1,33 @@
 :root {
   scroll-behavior: auto !important;
 
-
-
-  --prim-color: #cb1977;
-  --sec-color: #0000FF;
-  --accent-color: #008484;
-  --blackT-color: #071108;
-  --para1-color: #ffffff;
-  --para2-color: #63d471;
-  --dActive-color: #63a46c;
-  --hover-color: #3a3635;
+  --prim-color: #AE2C11;
+  --prim-hover-color: #8C230E;
+  --textHover-color: #39444D;
+  --accent-color: #5D5D5D;
+  --accent-hover-color: #4A4A4A;
+  --text-color: #E5E5DF;
+  --text-muted-color: #B8B8B2;
+  --muted-color: #DB9941;
+  --muted-hover-color: #C78530;
+  --bg-color: #07111D;
+  --bg-secondary-color: #0E1A29;
+  --border-color: #3E4C5A;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --link-color: #DB9941;
+  --link-hover-color: #B9752E;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 a {
-  color: white;
+  color: var(--text-color);
 }
 
 // mainBtn style-start
@@ -137,7 +144,7 @@ a {
       height: 2px;
       width: 0;
       animation: widthout 0.3s;
-      background-color: var(--dActive-color);
+      background-color: var(--prim-color);
     }
 
     svg {
@@ -150,7 +157,7 @@ a {
 
     &:hover {
       span {
-        color: var(--dActive-color);
+        color: var(--prim-color);
 
         &::before {
           animation: widthin 0.3s forwards;
@@ -158,7 +165,7 @@ a {
       }
 
       svg {
-        color: var(--dActive-color);
+        color: var(--prim-color);
         opacity: 1;
         transform: translate(0, 0) rotate(-45deg);
       }

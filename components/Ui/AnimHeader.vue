@@ -71,8 +71,8 @@ onUnmounted(() => {
   font-size: 1.6rem;
   grid-template-columns: repeat(4, 55px);
   gap: 15px;
-  text-shadow: 0 0 2px var(--para2-color);
-  color: var(--para2-color);
+  text-shadow: 0 0 2px var(--text-color);
+  color: var(--text-color);
   margin-bottom: 30px;
   .snapBox {
     overflow: hidden;
