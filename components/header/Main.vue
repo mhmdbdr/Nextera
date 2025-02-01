@@ -13,7 +13,7 @@
         <NuxtLink to="/">
           <transition name="logoTrans">
             <div v-show="isLogoVisible || isOpened" class="logo">
-              <img src="public/imgs/logoirl.png" alt="" />
+              <img src="../public/imgs/logoirl.png" alt="" />
             </div>
           </transition>
         </NuxtLink>
